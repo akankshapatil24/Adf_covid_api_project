@@ -1,0 +1,18 @@
+{
+	"name": "ds_lookup_seasons",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_formula1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "formulaone"
+			}
+		},
+		"schema": {}
+	}
+}

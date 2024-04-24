@@ -1,0 +1,27 @@
+{
+	"name": "ds_http_api_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_formula1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"directory_nm": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": {
+					"value": "@dataset().directory_nm",
+					"type": "Expression"
+				},
+				"fileSystem": "formulaone"
+			}
+		},
+		"schema": {}
+	}
+}

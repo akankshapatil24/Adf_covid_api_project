@@ -1,0 +1,26 @@
+{
+	"name": "ds_adls_formula1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_fprmula1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"releative_url": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "@dataset().releative_url",
+					"type": "Expression"
+				}
+			}
+		},
+		"schema": {}
+	}
+}
